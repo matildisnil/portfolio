@@ -5,11 +5,13 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import Container from '@mui/material/Container';
 
 import BasicCard from "./BasicCard";
 
 export default function BasicTimeline() {
   return (
+    <Container align="center">
     <Timeline>
       <TimelineItem>
         <TimelineSeparator>
@@ -38,5 +40,6 @@ export default function BasicTimeline() {
         </TimelineContent>
       </TimelineItem>
     </Timeline>
+    </Container>
   );
 }

@@ -1,16 +1,20 @@
 import Navbar from "./components/Navbar";
 import CssBaseline from '@mui/material/CssBaseline';
-import MyTimeline from "./components/MyTimeline";
-import MyImage from "./components/MyImage";
+import Projects from "./sections/Projects";
+import Introduction from "./sections/Introduction";
 
 function App() {
   return (
     <div className="App">
       <CssBaseline />
       <Navbar/>
-      <MyImage/>
-      Hello
-      <MyTimeline/>
+{/*       <Grid container justify="center">
+        <Grid item>
+        <Typography variant="h2">Hi, I'm Matilda</Typography>
+        </Grid>
+      </Grid> */}
+      <Introduction/>
+      <Projects/>
     </div>
   );
 }

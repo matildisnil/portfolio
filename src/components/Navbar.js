@@ -12,6 +12,9 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import GitHub from '@mui/icons-material/GitHub';
+
 
 const pages = ['Projects', 'Technologies', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -124,6 +127,7 @@ const ResponsiveAppBar = () => {
               </Button>
             ))}
           </Box>
+          <GitHubIcon sx={{ display: { xs: 'none', md: 'flex' }, ml: 1 }} />
 
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
