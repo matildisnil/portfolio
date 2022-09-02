@@ -6,17 +6,25 @@ const MyImage = () => {
     <Box   display="flex"
     justifyContent="center"
     alignItems="center">
-    <Box
-    component="img"
-    sx={{
-    height: 400,
-    width: 400,
-    maxHeight: { xs: 250, md: 400 },
-    maxWidth: { xs: 250, md: 400 },
-    }}
-    alt="The house from the offer."
-    src="/roundCVImage.png"
-    />
+      {/* <Box
+        component="img"
+        sx={{
+        height: 400,
+        width: 400,
+        maxHeight: { xs: 250, md: 400 },
+        maxWidth: { xs: 250, md: 400 },
+        }} */}
+        <Box
+        component="img"
+        sx={{
+        height: { xs: 250, sm: 500, md: 300, lg: 500, xl: 600 },
+        width: { xs: 250, sm: 500, md: 300, lg: 500, xl: 600 },
+
+
+        }}
+        alt="The house from the offer."
+        src="/roundCVImage.png"
+      />
     </Box>
   )
 }

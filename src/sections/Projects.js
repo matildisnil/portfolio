@@ -7,7 +7,7 @@ import projects from "../data/projects";
 
 const Projects = () => {
   return (
-    <Container>
+    <Container id="Projects">
         <Typography variant="h2" align="center">
             My projects
         </Typography>

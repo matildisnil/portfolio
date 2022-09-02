@@ -120,12 +120,15 @@ const ResponsiveAppBar = () => {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                href="#Projects"
+                onClick={() => {handleCloseNavMenu(); window.open("#Projects", '_blank').focus();}}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
               </Button>
             ))}
+
+{/*        removed from button, as it keeps links from working, it shouldn\t be there anyway, should it?     onClick={handleCloseNavMenu} */}
           </Box>
           <GitHubIcon sx={{ display: { xs: 'none', md: 'flex' }, ml: 1 }} />
 
