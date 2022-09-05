@@ -1,9 +1,9 @@
 import React from 'react'
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Container } from "@mui/material";
 import MyImage from "../components/MyImage";
 import { Box } from '@mui/system';
 
-const Introduction = () => {
+/* const Introduction = () => {
   return (
     <Grid container sx={{height: '100vh'}}>
       <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
@@ -20,16 +20,16 @@ const Introduction = () => {
       </Grid>
     </Grid>
   )
-}
+} */
 
-/* const Introduction = () => {
+const Introduction = () => {
     return (
-      <Container maxWidth="xs" minHeight="vh">
+      <Container sx={{height: '100vh', width: '0.8', mt: '5%'}}>
           <MyImage/>
           <Typography variant="h2" align="center">Hi, I'm Matilda</Typography>
-          <Typography variant="p" align="center">I'm a full stack JavaScript developer with a passion for learning new things. Nothing makes me quite as happy as having a good problem to solve.</Typography>
+          <Typography variant="p" align="center" >I'm a full stack JavaScript developer with a passion for learning new things. Nothing makes me quite as happy as having a good problem to solve. This site is under construction.</Typography>
     </Container>
     )
-  } */
+  } 
 
 export default Introduction

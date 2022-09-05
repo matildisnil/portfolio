@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 
 export default function BasicCard({thisProject}) {
   return (
-    <Card sx={{ width: 700, mb: 3 }}>
+    <Card sx={{ width: 0.8, mb: 3 }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           Might put something here

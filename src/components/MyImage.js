@@ -17,10 +17,8 @@ const MyImage = () => {
         <Box
         component="img"
         sx={{
-        height: { xs: 250, sm: 500, md: 300, lg: 500, xl: 600 },
-        width: { xs: 250, sm: 500, md: 300, lg: 500, xl: 600 },
-
-
+        height: { xs: 250, sm: 300, md: 300, lg: 300, xl: 600 },
+        width: { xs: 250, sm: 300, md: 300, lg: 300, xl: 600 },
         }}
         alt="The house from the offer."
         src="/roundCVImage.png"
