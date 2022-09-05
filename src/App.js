@@ -2,7 +2,6 @@ import Navbar from "./components/Navbar";
 import CssBaseline from '@mui/material/CssBaseline';
 import Projects from "./sections/Projects";
 import Introduction from "./sections/Introduction";
-import AltIntroduction from "./sections/AltIntroduction";
 
 function App() {
   return (

@@ -1,7 +1,6 @@
 import React from 'react'
-import { Grid, Typography, Container } from "@mui/material";
+import { Typography, Container } from "@mui/material";
 import MyImage from "../components/MyImage";
-import { Box } from '@mui/system';
 
 /* const Introduction = () => {
   return (
