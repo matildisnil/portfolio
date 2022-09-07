@@ -5,7 +5,8 @@ import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 
 const Introduction = () => {
   return (
-    <Grid container id="Introduction" spacing={{xs: 5, sm: 5, md: 5}} sx={{minHeight: {md: '100vh'}, 
+    <Box>
+    <Grid container id="Introduction" spacing={{xs: 5, sm: 5, md: 5}} className="section" sx={{minHeight: {md: 'calc(100vh-20)'}, 
     width: '0.9', 
     alignItems:"center",
     justifyContent:"center"}}>
@@ -27,14 +28,15 @@ const Introduction = () => {
         </Typography> */}
         <Typography variant="body1" component="p" align="justify">I'm a full stack JavaScript developer based in Stockholm. I love learning new things and with programming, I get to do that non-stop. Nothing makes me quite as happy as having a good problem in front of me.
         </Typography>
-        <Box align="center">
+        </Box>
+      </Grid>
+    </Grid>
+    <Box align="center">
         <a href="#Projects">
           <ExpandMoreOutlinedIcon sx={{fontSize: 150}}/>
         </a>
         </Box>
-        </Box>
-      </Grid>
-    </Grid>
+    </Box>
   )
 } 
 
