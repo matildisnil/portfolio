@@ -11,14 +11,8 @@ export default function BasicCard({thisProject}) {
   return (
     <Card sx={{ width: 0.8, mb: 3 }}>
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          Might put something here
-        </Typography>
         <Typography variant="h5" component="div">
           {thisProject.title}
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          subtitle
         </Typography>
         <Typography variant="body2">
           {thisProject.description}

@@ -4,16 +4,18 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 
 export default function AltIntroduction() {
 
   return (
-    <Card sx={{ display: 'flex' }}>
+    <Container sx={{ display:'flex', justifyContent:'center', height: '100vh' }}>
+    <Card sx={{ display: 'flex', width: '0.8', flexWrap: {xs: 'wrap', sm: 'wrap', md: 'noWrap', lg: 'noWrap', xl: 'noWrap' } }}>
       <CardMedia
         component="img"
-        sx={{ width: 400 }}
+        sx={{ width: 300 }}
         image="/roundCVImage.png"
-        alt="Live from space album cover"
+        alt="Matilda Lindahl"
       />
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <CardContent sx={{ flex: '1 0 auto' }}>
@@ -25,5 +27,6 @@ export default function AltIntroduction() {
       </Box>
 
     </Card>
+    </Container>
   );
 }

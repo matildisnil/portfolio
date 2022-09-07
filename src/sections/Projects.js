@@ -3,20 +3,25 @@ import { Container } from '@mui/system';
 import BasicCard from '../components/BasicCard';
 import { Box, Typography } from '@mui/material';
 import projects from "../data/projects";
+import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 
 
 const Projects = () => {
   return (
-    <Container id="Projects">
-        <Typography variant="h2" align="center">
+    <Container id="Projects" className="section">
+        <Typography variant="h2" align="center" mb={5}>
             My projects
         </Typography>
-        <Box display="flex"
+        <Box display="flex" className="projects__board"
     justifyContent="center"
     alignItems="center" sx={{ flexDirection: 'column' }}>
-            {projects.map(project =>  (<BasicCard thisProject={project}/>))}
+            {projects.map((project, index) =>  (<BasicCard thisProject={project} key={index} />))}
         </Box>
-
+        <Box align="center">
+        <a href="#Skills">
+          <ExpandMoreOutlinedIcon sx={{fontSize: 150}}/>
+        </a>
+        </Box>
     </Container>
   )
 }

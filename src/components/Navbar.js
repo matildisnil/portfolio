@@ -10,9 +10,10 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 
-const pages = ['Projects', 'Technologies', 'Contact'];
+const pages = ['Projects', 'Skills', 'Contact'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
@@ -26,7 +27,8 @@ const ResponsiveAppBar = () => {
   //   setAnchorElUser(event.currentTarget);
   // };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (event) => {
+    console.log(event.target);
     setAnchorElNav(null);
   };
 
@@ -35,7 +37,7 @@ const ResponsiveAppBar = () => {
   // };
 
   return (
-    <AppBar position="static">
+    <AppBar position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 {/*           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
@@ -47,6 +49,7 @@ const ResponsiveAppBar = () => {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
+              flexGrow: 1,
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '0rem',
@@ -54,7 +57,7 @@ const ResponsiveAppBar = () => {
               textDecoration: 'none',
             }}
           >
-            Matilda
+            Matilda Lindahl
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -110,14 +113,14 @@ const ResponsiveAppBar = () => {
               textDecoration: 'none',
             }}
           >
-            Matilda
+            Matilda Lindahl
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 href="#Projects"
-                onClick={() => {handleCloseNavMenu(); window.open("#Projects", '_blank').focus();}}
+                onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
@@ -126,7 +129,13 @@ const ResponsiveAppBar = () => {
 
 {/*        removed from button, as it keeps links from working, it shouldn\t be there anyway, should it?     onClick={handleCloseNavMenu} */}
           </Box>
+          <a href="https://github.com/matildisnil">
           <GitHubIcon sx={{ display: { xs: 'none', md: 'flex' }, ml: 1 }} />
+          </a>
+          <a href="http://www.linkedin.com/in/matildalindahl">
+          <LinkedInIcon sx={{ display: { xs: 'none', md: 'flex' }, ml: 1 }}/>
+          </a>
+          
 
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

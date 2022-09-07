@@ -1,21 +1,27 @@
 import Navbar from "./components/Navbar";
 import CssBaseline from '@mui/material/CssBaseline';
 import Projects from "./sections/Projects";
-import Introduction from "./sections/Introduction";
+import Skills from "./sections/Skills"
+import Introduction2 from "./sections/Introduction2";
+import AltIntroduction from "./sections/AltIntroduction";
+import { Container } from "@mui/system";
 
 function App() {
   return (
     <div className="App">
       <CssBaseline />
-      <Navbar/>
+      <Navbar position="sticky"/>
+      <Container className="content-container">
 {/*       <Grid container justify="center">
         <Grid item>
         <Typography variant="h2">Hi, I'm Matilda</Typography>
         </Grid>
       </Grid> */}
-      <Introduction/>
+      <Introduction2/>
 
       <Projects/>
+      <Skills/>
+      </Container>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Typography, Container } from "@mui/material";
 import MyImage from "../components/MyImage";
+import ExpandMoreOutlined from '@mui/icons-material/ExpandMoreOutlined';
 
 /* const Introduction = () => {
   return (
@@ -27,6 +28,11 @@ const Introduction = () => {
           <MyImage/>
           <Typography variant="h2" align="center">Hi, I'm Matilda</Typography>
           <Typography variant="p" align="center" >I'm a full stack JavaScript developer with a passion for learning new things. Nothing makes me quite as happy as having a good problem to solve. This site is under construction.</Typography>
+          <Box align="center">
+            <a href="#Projects">
+              <ExpandMoreOutlinedIcon sx={{fontSize: 150}}/>
+            </a>
+        </Box>
     </Container>
     )
   } 
