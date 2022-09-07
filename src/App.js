@@ -3,7 +3,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Projects from "./sections/Projects";
 import Skills from "./sections/Skills"
 import Introduction2 from "./sections/Introduction2";
-import AltIntroduction from "./sections/AltIntroduction";
 import { Container } from "@mui/system";
 
 function App() {
