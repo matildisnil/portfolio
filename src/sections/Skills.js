@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, Paper, Typography, Grid} from '@mui/material'
+import {Box, Typography, Grid} from '@mui/material'
 import SkillsPaper from '../components/SkillsPaper';
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
 
