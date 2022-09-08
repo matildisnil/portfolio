@@ -6,22 +6,25 @@ import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 const Introduction = () => {
   return (
     <Box>
-    <Grid container id="Introduction" spacing={{xs: 5, sm: 5, md: 5}} className="section" sx={{minHeight: {md: 'calc(100vh-20)'}, 
-    width: '0.9', 
-    alignItems:"center",
-    justifyContent:"center"}}>
-      <Grid item xs={12} sm={12} md={4} lg={4} xl={4} sx={{mt:{xs: 5, md: 0}}}> 
+    <Grid container id="Introduction" spacing={{xs: 5, sm: 7, md: 5}} className="section" sx={{
+      minHeight: {md: 'calc(100vh-20)'}, 
+      width: '0.9', 
+      alignItems:"center",
+      justifyContent:"center",
+      marginBottom: {xs: 0, sm: 7, md: 0}}}>
+      <Grid item xs={12} sm={12} md={4} lg={4} xl={4} sx={{mb:{xs: 0, md: 0}}}> 
         <MyImage/>
       </Grid>
 
       <Grid item xs={12} sm={12} md={7} lg={7} xl={7} >
-        <Box width={{xs: 0.85, sm: 0.7, md: 0.8}} sx={{margin: '0 auto'}}>
+        <Box width={{xs: 0.95, sm: 0.7, md: 0.8}} sx={{margin: '0 auto'}}>
         <Typography variant="h3" component="h1" sx={{
-            display: {xs: 'none', md: 'flex'}
+            display: {xs: 'none', md: 'block'}
         }} mb={2}>Hi, I'm Matilda
         </Typography>
         <Typography variant="h3" component="h1" align='center' sx={{
-            display: {xs: 'flex', sm: 'flex', md: 'none'}, fontSize: {xs: 46}
+            display: {xs: 'block', md: 'none'},
+            fontSize: {xs: 32, sm: 46}
         }} mb={2} >Hi, I'm Matilda
         </Typography>
  {/*        <Typography variant="h2" align="center" mb={2}>Hi, I'm Matilda

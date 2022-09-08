@@ -7,7 +7,7 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import Container from '@mui/material/Container';
 
-import BasicCard from "./BasicCard";
+import BasicCard from "./ProjectCard";
 
 export default function BasicTimeline() {
   return (

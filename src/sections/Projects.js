@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from '@mui/system';
-import BasicCard from '../components/BasicCard';
+import BasicCard from '../components/ProjectCard';
 import { Box, Typography } from '@mui/material';
 import projects from "../data/projects";
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
@@ -8,7 +8,7 @@ import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 
 const Projects = () => {
   return (
-    <Container id="Projects" className="section">
+    <Box id="Projects" className="section">
         <Typography variant="h2" align="center" mb={5}>
             My projects
         </Typography>
@@ -22,7 +22,7 @@ const Projects = () => {
           <ExpandMoreOutlinedIcon sx={{fontSize: 150}}/>
         </a>
         </Box>
-    </Container>
+    </Box>
   )
 }
 
