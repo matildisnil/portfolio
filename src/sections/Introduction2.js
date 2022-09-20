@@ -1,11 +1,15 @@
-import React from 'react'
+import React from 'react';
 import { Typography, Grid, Box } from "@mui/material";
 import MyImage from "../components/MyImage";
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 
+
+
 const Introduction = () => {
+
+
   return (
-    <Box>
+    <Box >
     <Grid container id="Introduction" spacing={{xs: 5, sm: 7, md: 5}} className="section" sx={{
       minHeight: {md: 'calc(100vh-20)'}, 
       width: '0.9', 
