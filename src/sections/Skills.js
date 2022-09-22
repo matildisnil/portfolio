@@ -2,8 +2,9 @@ import React from 'react'
 import {Box, Typography, Grid} from '@mui/material'
 import SkillsPaper from '../components/SkillsPaper';
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
+// import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined'
+import skills from '../data/skills'
 
-const skills = [{title: 'Frontend', techs: ['React', 'Redux', 'CSS3', 'HTML5', 'PrimeReact', 'Material-UI']}, {title: 'Backend', techs: ['node.js', 'express', 'REST', 'MongoDB', 'PostgreSQL', ]}, {title: 'Tools', techs: ['Git', 'Heroku', 'Netlify', 'Contentful']}];
 
 const Skills = () => {
   return (
@@ -21,6 +22,11 @@ const Skills = () => {
           <ExpandLessOutlinedIcon sx={{fontSize: 150}}/>
         </a>
       </Box>
+{/*         <Box align="center">
+          <a href="#Contact">
+            <ExpandMoreOutlinedIcon sx={{fontSize: 150}}/>
+          </a>
+        </Box> */}
     </Box>
   )
 }

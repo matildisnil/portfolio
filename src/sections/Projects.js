@@ -5,11 +5,10 @@ import projects from "../data/projects";
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 
 
-
 const Projects = () => {
 
   return (
-    <Box id="Projects" className="section" >
+    <Box id="Projects" className="section" sx={{display: { xs: 'block', sm: 'none'}}}>
         <Typography variant="h2" align="center" mb={5}>
             My projects
         </Typography>

@@ -1,5 +1,6 @@
 import React from 'react'
-import {Grid, Paper, Typography, Box} from '@mui/material'
+import {Grid, Paper, Typography, Box} from '@mui/material';
+import { GoPrimitiveDot } from 'react-icons/go';
 
 const SkillsPaper = ({thisSkill}) => {
   return (
@@ -10,7 +11,12 @@ const SkillsPaper = ({thisSkill}) => {
               {thisSkill.title}
           </Typography>
           {thisSkill.techs.map((element, index)=> {
-            return <Typography key={index}> {element}</Typography>
+            return (
+                  <Box className="skill-row">
+                    {element.icon ? element.icon : <GoPrimitiveDot />}
+                    <Typography ml={1} key={index} >  {element.title} </Typography>
+                  </Box>
+                  )
           })}
         </Box>
       </Paper>

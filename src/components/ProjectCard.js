@@ -5,9 +5,10 @@ import CardContent from '@mui/material/CardContent';
 // import Button from '@mui/material/Button';
 // import Typography from '@mui/material/Typography';
 
-export default function BasicCard({thisProject}) {
+export default function ProjectCard({thisProject}) {
   return (
-    <Card sx={{ width: {xs: 1, sm: 0.8, md: 0.7}, mb: 3 }}>
+/*     <Card sx={{ width: {xs: 1, sm: 0.8, md: 0.7}, mb: 3 }}> */
+    <Card sx={{width: {xs: 1}, mb: 3 }}>
       <CardContent>
         <Typography variant="h5" component="div">
           {thisProject.title}

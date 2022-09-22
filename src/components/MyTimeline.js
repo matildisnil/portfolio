@@ -6,10 +6,11 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import Container from '@mui/material/Container';
+import projects from '../data/projects';
 
-import BasicCard from "./ProjectCard";
+import ProjectCard from "./ProjectCard";
 
-export default function BasicTimeline() {
+export default function MyTimeline() {
   return (
     <Container align="center">
     <Timeline>
@@ -19,7 +20,7 @@ export default function BasicTimeline() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
-          <BasicCard/>
+          <ProjectCard thisProject={projects[0]}/>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -28,7 +29,7 @@ export default function BasicTimeline() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
-          <BasicCard/>
+          <ProjectCard thisProject={projects[0]}/>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -36,7 +37,7 @@ export default function BasicTimeline() {
           <TimelineDot />
         </TimelineSeparator>
         <TimelineContent>
-          <BasicCard/>
+          <ProjectCard thisProject={projects[0]}/>
         </TimelineContent>
       </TimelineItem>
     </Timeline>
