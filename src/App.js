@@ -3,7 +3,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Projects from "./sections/Projects";
 import Skills from "./sections/Skills"
 import Introduction2 from "./sections/Introduction2";
-// import ProjectsTimeline from "./sections/ProjectsTimeline";
+import ProjectsTimeline from "./sections/ProjectsTimeline";
 // import Contact from "./sections/Contact";
 import { Container } from "@mui/system";
 
@@ -19,7 +19,7 @@ function App() {
         </Grid>
       </Grid> */}
       <Introduction2/>
-{/*       <ProjectsTimeline /> */}
+      <ProjectsTimeline />
       <Projects />
       <Skills/>
 {/*       <Contact /> */}

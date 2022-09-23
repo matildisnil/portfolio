@@ -1,8 +1,4 @@
 const projects = [
-    {title: "Portfolio",
-    description: "This portfolio site, made using React and MUI.",
-    githubLink: "https://github.com/matildisnil/portfolio",
-    deployedLink: "https://matilda-lindahl-portfolio.netlify.app/"},
     {title: "Activity-knot", 
     description: "My mob's final project for the </salt> bootcamp. A web app to help you meet new people who share your interests. Uses a PERN-stack, and PrimeReact components.", 
     githubLink: "https://github.com/matildisnil/saltFinalProjectFrontend", 
@@ -13,8 +9,10 @@ const projects = [
     githubLink: "https://github.com/matildisnil/seeYouThereFrontend", 
     secondGithubLink: "https://github.com/matildisnil/seeYouThereBackend",
     deployedLink: "https://see-you-there.herokuapp.com/"},
-
-
+    {title: "Portfolio",
+    description: "This portfolio site, made using React and MUI.",
+    githubLink: "https://github.com/matildisnil/portfolio",
+    deployedLink: "https://matilda-lindahl-portfolio.netlify.app/"},
 ];
 
 export default projects;
