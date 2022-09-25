@@ -33,13 +33,20 @@ const Introduction = () => {
         </Typography>
  {/*        <Typography variant="h2" align="center" mb={2}>Hi, I'm Matilda
         </Typography> */}
-        <Typography variant="body1" component="p" align="justify">I'm a full stack JavaScript developer based in Stockholm. I love learning new things and with programming, I get to do that non-stop. Nothing makes me quite as happy as having a good problem in front of me.
+        
+        <Typography sx={{mb: 2}} variant="h5" component="p" align="justify">I'm a full stack JavaScript developer based in Stockholm.
+        </Typography>
+        <Typography sx={{mb: 2}} variant="body1" component="p" align="justify">I love learning new things and with programming, I get to do that non-stop. Nothing makes me quite as happy as having a good problem in front of me.
+        </Typography>
+        <Typography sx={{mb: 2}} variant="body1" component="p" align="justify"> {'In the summer of 2022 I attended the </salt> fullstack javascript bootcamp. Before that, I studied Russian at Stockholm University and Engineering Physics at KTH, including courses in Java and in Matlab.'}
+        </Typography>
+        <Typography sx={{mb: 2}} variant="body1" component="p" align="justify"> I guess I’ve always had a thing for languages, if not programming, then spoken languages.
         </Typography>
         </Box>
       </Grid>
     </Grid>
     <Box align="center">
-        <a href="#Projects">
+        <a href="#Skills">
           <ExpandMoreOutlinedIcon sx={{fontSize: 150}}/>
         </a>
         </Box>

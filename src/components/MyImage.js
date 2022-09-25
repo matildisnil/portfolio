@@ -21,7 +21,7 @@ const MyImage = () => {
         width: { xs: 250, sm: 300, md: 300},
         }}
         alt="The house from the offer."
-        src="/roundCVImage2.png"
+        src="/cv-modified.png"
       />
     </Box>
   )
