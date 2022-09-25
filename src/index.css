@@ -20,16 +20,23 @@ a {
     border: 10px solid black;
 } */
 
+
+
 .section {
 /*     scroll-snap-align: start; */
-    margin-top: 1rem;
+    position: relative;
+    padding-top: 2rem;
+}
+
+.first-section {
     padding-top: 4rem;
     position: relative;
 }
 
 .section__space-anchor {
   position: absolute;
-  top: -65px;
+  /* top: -65px; */
+  top: -100px;
   left: 0px;
 }
 
@@ -38,7 +45,7 @@ a {
 }
 
 .skills__board {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .skillspaper__text-container {
@@ -62,6 +69,6 @@ a {
     margin: 20px;
 }
 
-.expand-less {
+/* .expand-less {
     margin-bottom: 5rem;
-}
+} */

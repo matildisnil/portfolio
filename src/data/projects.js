@@ -18,7 +18,7 @@ const projects = [
     imageAddress: '/seeYouThere.png'},
     {title: "Portfolio",
     icons: [<SiReact />, <SiMaterialui /> ],
-    description: "This portfolio site, made using React and MUI. It is deployed on Netlify.",
+    description: "This portfolio site, made using React and MUI. Deployed on Netlify.",
     githubLink: "https://github.com/matildisnil/portfolio",
     deployedLink: "https://matilda-lindahl-portfolio.netlify.app/",
     imageAddress: '/portfolio2.png'},

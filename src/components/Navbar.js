@@ -5,7 +5,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 
-const sections = ['Projects', 'Skills'];
+const sections = ['Skills', 'Projects'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
