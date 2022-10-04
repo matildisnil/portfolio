@@ -3,9 +3,9 @@ import Box from '@mui/material/Box';
 
 const MyImage = () => {
   return (
-    <Box   display="flex"
-    justifyContent="center"
-    alignItems="center">
+    <Box display="flex"
+      justifyContent="center"
+      alignItems="center">
       {/* <Box
         component="img"
         sx={{
@@ -14,11 +14,11 @@ const MyImage = () => {
         maxHeight: { xs: 250, md: 400 },
         maxWidth: { xs: 250, md: 400 },
         }} */}
-        <Box
+      <Box
         component="img"
         sx={{
-        height: { xs: 250, sm: 300, md: 300 },
-        width: { xs: 250, sm: 300, md: 300},
+          height: { xs: 250, sm: 300, md: 300 },
+          width: { xs: 250, sm: 300, md: 300 },
         }}
         alt="The house from the offer."
         src="/cv-modified.png"

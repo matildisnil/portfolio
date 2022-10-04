@@ -13,11 +13,11 @@ function App() {
   return (
     <div className="App">
       <CssBaseline />
-      <Navbar position="sticky"/>
+      <Navbar position="sticky" />
       <Container className="content-container">
-      <Introduction/>
-      <Skills/>
-      <Projects />
+        <Introduction />
+        <Skills />
+        <Projects />
       </Container>
       <Footer />
     </div>

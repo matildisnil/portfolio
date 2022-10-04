@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, MenuItem} from '@mui/material';
+import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -72,9 +72,9 @@ const ResponsiveAppBar = () => {
             >
               {sections.map((page) => (
                 <a href={`#${page}`} key={page}>
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page}</Typography>
+                  </MenuItem>
                 </a>
               ))}
             </Menu>
@@ -108,15 +108,15 @@ const ResponsiveAppBar = () => {
               </Button>
             ))}
 
-{/*        removed from button, as it keeps links from working, it shouldn\t be there anyway, should it?     onClick={handleCloseNavMenu} */}
+            {/*        removed from button, as it keeps links from working, it shouldn\t be there anyway, should it?     onClick={handleCloseNavMenu} */}
           </Box>
           <a href="https://github.com/matildisnil">
-          <GitHubIcon sx={{ display: { xs: 'none', md: 'flex' }, ml: 1 }} />
+            <GitHubIcon sx={{ display: { xs: 'none', md: 'flex' }, ml: 1 }} />
           </a>
           <a href="http://www.linkedin.com/in/matildalindahl">
-          <LinkedInIcon sx={{ display: { xs: 'none', md: 'flex' }, ml: 1 }}/>
+            <LinkedInIcon sx={{ display: { xs: 'none', md: 'flex' }, ml: 1 }} />
           </a>
-          
+
 
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

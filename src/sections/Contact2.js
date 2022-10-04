@@ -7,19 +7,19 @@ import EmailIcon from '@mui/icons-material/Email';
 
 const Contact2 = () => {
   return (
-    <Container sx={{width: 0.6}}>
-        <Typography variant="h2" component="h2" align="center" mb={5}>Contact me!</Typography>
-            <Box sx={{display: 'flex', justifyContent: 'space-around'}} >
-                <Paper >
-                <GitHubIcon sx={{fontSize: 100}} />
-                </Paper>
-                <Paper>
-                <LinkedInIcon sx={{fontSize: 100}} />
-                </Paper>
-                <Paper>
-                <EmailIcon sx={{fontSize: 100}} />
-                </Paper>
-            </Box>
+    <Container sx={{ width: 0.6 }}>
+      <Typography variant="h2" component="h2" align="center" mb={5}>Contact me!</Typography>
+      <Box sx={{ display: 'flex', justifyContent: 'space-around' }} >
+        <Paper >
+          <GitHubIcon sx={{ fontSize: 100 }} />
+        </Paper>
+        <Paper>
+          <LinkedInIcon sx={{ fontSize: 100 }} />
+        </Paper>
+        <Paper>
+          <EmailIcon sx={{ fontSize: 100 }} />
+        </Paper>
+      </Box>
     </Container>
   )
 }

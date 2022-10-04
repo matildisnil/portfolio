@@ -4,7 +4,7 @@ import App from './App';
 import './index.css'
 import { ThemeProvider } from '@mui/material/styles';
 import { createTheme } from '@mui/material/styles';
-import { pink, teal, purple, cyan } from '@mui/material/colors';
+import { pink, teal, cyan } from '@mui/material/colors';
 
 const theme = createTheme({
   /*   palette: {
@@ -27,24 +27,24 @@ const theme = createTheme({
     background: {
       default: "#e1f2f7"
     },
-/*     button2: {
-      light: "#82E0AA",
-      main: "#fb6376",
-      dark: "#2ECC71",
-      contrastText: '#fff',
-    },
-    button3: {
-      light: "#82E0AA",
-      main: "#7d5ba6",
-      dark: "#2ECC71",
-      contrastText: '#fff',
-    },
-    button1: {
-      light: "#82E0AA",
-      main: "#276fbf",
-      dark: "#2ECC71",
-      contrastText: '#fff',
-    } */
+    /*     button2: {
+          light: "#82E0AA",
+          main: "#fb6376",
+          dark: "#2ECC71",
+          contrastText: '#fff',
+        },
+        button3: {
+          light: "#82E0AA",
+          main: "#7d5ba6",
+          dark: "#2ECC71",
+          contrastText: '#fff',
+        },
+        button1: {
+          light: "#82E0AA",
+          main: "#276fbf",
+          dark: "#2ECC71",
+          contrastText: '#fff',
+        } */
     button1: {
       light: pink[50],
       main: pink[100],
@@ -69,9 +69,9 @@ const theme = createTheme({
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <ThemeProvider theme={theme}>
-    <App />
-  </ThemeProvider>
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
 
   </React.StrictMode>
 );
