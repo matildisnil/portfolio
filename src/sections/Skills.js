@@ -15,7 +15,7 @@ const Skills = () => {
         <Box className="section__space-anchor" id="Skills"></Box>
     <Grid container direction="row" justifyContent="center" alignItems="center" spacing={3} className='skills__board'>
         {skills.map((skill, index) => {
-            return <SkillsPaper thisSkill={skill} key={index}/>
+            return <SkillsPaper thisSkill={skill} key={'skill' + index}/>
         })}
       </Grid>
       {/* <Box align="center" className="expand-less">
@@ -25,7 +25,7 @@ const Skills = () => {
       </Box> */}
         <Box align="center">
           <a href="#Projects">
-            <ExpandMoreOutlinedIcon sx={{fontSize: 150}}/>
+            <ExpandMoreOutlinedIcon className="grow" sx={{fontSize: 150}}/>
           </a>
         </Box>
     </Box>

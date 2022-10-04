@@ -1,5 +1,5 @@
 import React from 'react';
-import BasicCard from '../components/ProjectCard';
+import ProjectCard from '../components/ProjectCard';
 import { Box, Typography } from '@mui/material';
 import projects from "../data/projects";
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
@@ -16,11 +16,11 @@ const Projects = () => {
         <Box display="flex" className="projects__board"
     justifyContent="center"
     alignItems="center" sx={{ flexDirection: 'column' }}>
-            {projects.map((project, index) =>  (<BasicCard thisProject={project} key={index} />))}
+            {projects.map((project, index) =>  (<ProjectCard thisProject={project} key={'project' + index} />))}
         </Box>
         <Box align="center">
         <a href="#Introduction">
-          <ExpandLessOutlinedIcon sx={{fontSize: 150}}/>
+          <ExpandLessOutlinedIcon className="grow" sx={{fontSize: 150}}/>
         </a>
         </Box>
     </Box>

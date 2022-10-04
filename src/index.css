@@ -40,8 +40,16 @@ a {
   left: 0px;
 }
 
-.projects__board {
+.grow { 
+  transition: all .2s ease-in-out; 
+}
+    
+.grow:hover { 
+  transform: scale(1.1); 
+}
 
+.projectcard__button {
+    padding: 20px;
 }
 
 .skills__board {
@@ -55,6 +63,12 @@ a {
 .skill-row {
     display: flex;
     align-items: center;
+}
+
+.section__space-anchor--less-space {
+    posistion: relative;
+    top: -80px;
+    left: 0px;
 }
 
 .contact__container {

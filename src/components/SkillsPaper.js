@@ -12,9 +12,9 @@ const SkillsPaper = ({thisSkill}) => {
           </Typography>
           {thisSkill.techs.map((element, index)=> {
             return (
-                  <Box className="skill-row">
+                  <Box className="skill-row" key={element.title + index}>
                     {element.icon ? element.icon : <GoPrimitiveDot />}
-                    <Typography ml={1} key={index} >  {element.title} </Typography>
+                    <Typography ml={1} >  {element.title} </Typography>
                   </Box>
                   )
           })}
