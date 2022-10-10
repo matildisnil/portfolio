@@ -14,7 +14,8 @@
 //   // const indexOfLast = projects.length - 1;
 
 //   return (
-//     <Container  id="Projects" className="section" sx={{width:{sm: 1, md: 0.8}, display: { xs: 'none', sm: 'block'}}} >
+//     <Container  id="Projects" className="section" sx={{width:{sm: 1, md: 0.8},
+//       display: { xs: 'none', sm: 'block'}}} >
 //       <Typography variant="h2" align="center" mb={5}>
 //         My projects
 //       </Typography>
@@ -32,7 +33,7 @@
 //                       <TimelineConnector />
 //                       <TimelineDot />
 //                       <TimelineConnector />
-//                     </TimelineSeparator>                    
+//                     </TimelineSeparator>
 //                     <TimelineContent>
 //                         <ProjectCard thisProject={project} key={index} />
 //                     </TimelineContent>

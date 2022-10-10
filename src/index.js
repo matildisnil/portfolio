@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.css'
-import { ThemeProvider } from '@mui/material/styles';
-import { createTheme } from '@mui/material/styles';
+import './index.css';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { pink, teal, cyan } from '@mui/material/colors';
+import App from './App';
 
 const theme = createTheme({
   /*   palette: {
@@ -25,7 +24,7 @@ const theme = createTheme({
       contrastText: '#fff',
     },
     background: {
-      default: "#e1f2f7"
+      default: '#e1f2f7',
     },
     /*     button2: {
           light: "#82E0AA",
@@ -62,7 +61,7 @@ const theme = createTheme({
       main: teal[100],
       dark: teal[200],
       contrastText: '#000',
-    }
+    },
   },
 });
 
@@ -73,5 +72,5 @@ root.render(
       <App />
     </ThemeProvider>
 
-  </React.StrictMode>
+  </React.StrictMode>,
 );

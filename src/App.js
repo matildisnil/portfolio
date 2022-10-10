@@ -1,13 +1,14 @@
-import Navbar from "./components/Navbar";
+import React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
-import Projects from "./sections/Projects";
-import Skills from "./sections/Skills"
-import Introduction from "./sections/Introduction";
-import Footer from "./sections/Footer";
+import { Container } from '@mui/system';
+import Navbar from './components/Navbar';
+import Projects from './sections/Projects';
+import Skills from './sections/Skills';
+import Introduction from './sections/Introduction';
+import Footer from './sections/Footer';
 // import Contact2 from "./sections/Contact2"
 // import ProjectsTimeline from "./sections/ProjectsTimeline";
 // import Contact from "./sections/Contact";
-import { Container } from "@mui/system";
 
 function App() {
   return (

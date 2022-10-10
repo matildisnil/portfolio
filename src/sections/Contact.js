@@ -3,8 +3,6 @@
 // import { useState } from 'react';
 // import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
 
-
-
 // const Contact = () => {
 //   const defaultValues = {
 //     email: "",
@@ -23,10 +21,13 @@
 
 //   return (
 //     <Container className="section" sx={{width:{xs: 1, sm: 0.8, md: 0.7}}}>
-//       <Paper>  
+//       <Paper>
 //         <Box className="contact__container">
-//       <Typography variant="h3" component="h1" align="center" m={2} className="form-container__heading" >Contact me!</Typography>
-//       <Box className="section__space-anchor section__space-anchor--less-space" id="Contact"></Box>
+//       <Typography variant="h3" component="h1" align="center"
+//            m={2} className="form-container__heading" >
+//            Contact me!</Typography>
+//       <Box className="section__space-anchor
+//            section__space-anchor--less-space" id="Contact"></Box>
 //     <form onSubmit={formSubmitHandler} className="contact-form">
 //       <TextField
 //         id="email-input"
