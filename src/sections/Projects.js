@@ -1,45 +1,49 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
+// import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import ClearIcon from '@mui/icons-material/Clear';
 import ProjectCard from '../components/ProjectCard';
 import importedProjects from '../data/projects';
 
 const Projects = () => {
   const [projects, setProjects] = useState(importedProjects);
-  const [currentTechFilters, setCurrentTechFilters] = useState([]);
-  const techNames = [];
-  importedProjects.forEach(project => {
-    const projectTechs = project.techs.map(tech => tech.name);
-    techNames.push(...projectTechs);
-  });
+  const [techs, setTechs] = useState([]);
 
-  const uniqueTechNames = [...new Set(techNames)];
-  // const filterProjects = e => {
-  //   const filteredProjects = projects
-  //     .filter(project => project.techs
-  //       .find(tech => tech.name === e.target.name));
-  //   setProjects(filteredProjects);
-  // };
+  useEffect(() => {
+    const techNames = [];
+    importedProjects.forEach(project => {
+      const projectTechs = project.techs.map(tech => tech.name);
+      techNames.push(...projectTechs);
+    });
+    const uniqueTechNames = [...new Set(techNames)];
+    const techsInitialState = uniqueTechNames.map(tech => ({ name: tech, filterIsActive: false }));
+    setTechs(techsInitialState);
+  }, []);
 
   const changeFilters = e => {
-    const indexOfFilter = currentTechFilters.findIndex(filter => filter === e.target.name);
-    if (indexOfFilter === -1) {
-      return setCurrentTechFilters(prev => [...prev, e.target.name]);
-    }
-    return setCurrentTechFilters(prev => [
-      ...prev.slice(0, indexOfFilter),
-      ...prev.slice(indexOfFilter + 1),
-    ]);
+    const indexOfTech = techs.findIndex(tech => tech.name === e.currentTarget.name);
+    setTechs(prev => {
+      const found = prev[indexOfTech];
+      found.filterIsActive = !found.filterIsActive;
+      return [...prev.slice(0, indexOfTech), found, ...prev.slice(indexOfTech + 1)];
+    });
+  };
+
+  const clearFilters = () => {
+    setTechs(prev => prev.map(tech => ({ ...tech, filterIsActive: false })));
   };
 
   useEffect(() => {
     let filteredProjects = importedProjects;
-    currentTechFilters.forEach(techFilter => {
+    techs.filter(tech => tech.filterIsActive).forEach(techObj => {
       filteredProjects = filteredProjects.filter(project => project.techs
-        .find(tech => tech.name === techFilter));
+        .find(tech => tech.name === techObj.name));
     });
+    console.log('hello');
     setProjects(filteredProjects);
-  }, [currentTechFilters.length]);
+    // this dependency works because i'm not changing it in here
+  }, [techs]);
 
   return (
     <Box className="section" sx={{/* display: { xs: 'block', sm: 'none'} */ }}>
@@ -47,13 +51,27 @@ const Projects = () => {
         My projects
       </Typography>
       <Box className="section__space-anchor" id="Projects" />
-      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-        {uniqueTechNames.map(techName => (
-          <Button variant="contained" sx={{ margin: 1 }} onClick={changeFilters} name={techName} key={techName}>{techName}</Button>))}
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+        {techs.filter(tech => !tech.filterIsActive).map(tech => (
+          <Button variant="contained" sx={{ margin: 1 }} color="buttonTech" onClick={changeFilters} name={tech.name} key={tech.name}>{tech.name}</Button>))}
       </Box>
-      <Box>
-        Filters are
-        {currentTechFilters}
+
+      <Box sx={{
+        display: 'flex', justifyContent: 'center', flexWrap: 'wrap', mb: 5,
+      }}>
+        {techs.filter(tech => tech.filterIsActive).map(tech => (
+          <Button
+            sx={{ margin: 1 }}
+            variant="contained"
+            onClick={changeFilters}
+            name={tech.name}
+            color="buttonActiveTech"
+            key={tech.name}
+            endIcon={<ClearIcon />}>
+            {tech.name}
+          </Button>
+        ))}
+        {techs.filter(tech => tech.filterIsActive).length !== 0 && <Button variant="contained" color="buttonClearFilters" sx={{ margin: 1 }} onClick={clearFilters} key="remove_all" endIcon={<ClearIcon />}>Remove all filters</Button>}
       </Box>
       <Box
         display="flex"
@@ -62,6 +80,7 @@ const Projects = () => {
         alignItems="center"
         sx={{ flexDirection: 'column' }}>
         {projects.map(project => (<ProjectCard thisProject={project} key={`project_${project.title}`} />))}
+        {projects.length === 0 && 'There are no projects matching all the criteria'}
       </Box>
       <Box align="center">
         <a href="#Introduction">

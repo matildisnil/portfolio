@@ -2,14 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { pink, teal, cyan } from '@mui/material/colors';
+import {
+  pink, teal, cyan, blueGrey,
+} from '@mui/material/colors';
 import App from './App';
 
 const theme = createTheme({
-  /*   palette: {
-      primary: black,
-      secondary: teal,
-  } */
   palette: {
     primary: {
       light: '#484848',
@@ -26,24 +24,6 @@ const theme = createTheme({
     background: {
       default: '#e1f2f7',
     },
-    /*     button2: {
-          light: "#82E0AA",
-          main: "#fb6376",
-          dark: "#2ECC71",
-          contrastText: '#fff',
-        },
-        button3: {
-          light: "#82E0AA",
-          main: "#7d5ba6",
-          dark: "#2ECC71",
-          contrastText: '#fff',
-        },
-        button1: {
-          light: "#82E0AA",
-          main: "#276fbf",
-          dark: "#2ECC71",
-          contrastText: '#fff',
-        } */
     button1: {
       light: pink[50],
       main: pink[100],
@@ -61,6 +41,24 @@ const theme = createTheme({
       main: teal[100],
       dark: teal[200],
       contrastText: '#000',
+    },
+    buttonActiveTech: {
+      light: blueGrey[300],
+      main: blueGrey[400],
+      dark: blueGrey[500],
+      contrastText: '#000',
+    },
+    buttonClearFilters: {
+      light: blueGrey[700],
+      main: blueGrey[800],
+      dark: blueGrey[900],
+      contrastText: '#fff',
+    },
+    buttonTech: {
+      light: cyan[700],
+      main: cyan[800],
+      dark: cyan[900],
+      contrastText: '#fff',
     },
   },
 });
