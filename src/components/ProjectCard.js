@@ -7,7 +7,7 @@ import CardContent from '@mui/material/CardContent';
 // import Button from '@mui/material/Button';
 // import Typography from '@mui/material/Typography';
 
-export default function ProjectCard({ thisProject }) {
+export default function ProjectCard({ thisProject, techs }) {
   return (
     <Card sx={{
       display: 'flex', flexDirection: 'row', width: { xs: 1, sm: 0.8, md: 0.7 }, height: { md: 300 }, p: 2, mb: 3,
@@ -21,7 +21,11 @@ export default function ProjectCard({ thisProject }) {
           <Typography variant="body2" align="justify" sx={{ mb: 1, mr: { md: 2 }, flexGrow: 1 }}>
             {thisProject.description}
           </Typography>
-          <Box sx={{ fontSize: 25, flexGrow: 1 }}>{thisProject.techs.map(tech => <Box sx={{ display: 'inline', ml: 1 }} key={`${thisProject.title}_icon_${tech.name}`}>{tech.icon}</Box>)}</Box>
+          <Box sx={{
+            fontSize: 25, flexGrow: 1, display: 'flex', alignItems: 'center',
+          }}>
+            {thisProject.techs.map(tech => <Box className={techs.find(techFilter => techFilter.name === tech.name)?.filterIsActive && 'tech-icon__active'} sx={{ display: 'inline', ml: 1 }} key={`${thisProject.title}_icon_${tech.name}`}>{tech.icon}</Box>)}
+          </Box>
 
         </CardContent>
         <CardActions>

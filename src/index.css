@@ -52,6 +52,11 @@ a {
     padding: 20px;
 }
 
+.tech-icon__active {
+    color: #e91e63;
+    font-size: 30px;
+}
+
 .skills__board {
     margin-bottom: 3rem;
 }
@@ -66,9 +71,9 @@ a {
 }
 
 .section__space-anchor--less-space {
-    posistion: relative;
+    /* position: relative; */
     top: -80px;
-    left: 0px;
+    /* left: 0px; */
 }
 
 .contact__container {
@@ -80,7 +85,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
     height: 300px;
-    margin: 20px;
+    /* margin: 20px; */
 }
 
 /* .expand-less {

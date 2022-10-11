@@ -1,5 +1,5 @@
 import {
-  TextField, Button, Box, Typography, Container, Paper,
+  TextField, Button, Box, Typography, Paper,
 } from '@mui/material';
 import React, { useState } from 'react';
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
@@ -21,14 +21,14 @@ const Contact = () => {
   //   };
 
   return (
-    <Container className="section" sx={{ width: { xs: 1, sm: 0.8, md: 0.7 } }}>
+    <Box className="section" sx={{ width: { xs: 1, sm: 0.8, md: 0.7 }, mx: 'auto' }}>
       <Paper>
         <Box className="contact__container">
           <Typography
             variant="h3"
             component="h1"
             align="center"
-            m={2}
+            my={2}
             className="form-container__heading">
             Contact me!
           </Typography>
@@ -36,7 +36,7 @@ const Contact = () => {
             className="section__space-anchor
            section__space-anchor--less-space"
             id="Contact" />
-          <form target="_blank" action="https://formsubmit.co/81288dfd0888dfc00e1552147fed9660" method="POST" className="contact-form">
+          <Box component="form" target="_blank" action="https://formsubmit.co/81288dfd0888dfc00e1552147fed9660" method="POST" className="contact-form" sx={{ my: 2, mx: { xs: 0, sm: 1, md: 2 } }}>
             <TextField
               id="email-input"
               name="email"
@@ -64,7 +64,7 @@ const Contact = () => {
               onChange={handleInputChange}
               required />
             <Button variant="contained" type="submit" color="primary">Submit</Button>
-          </form>
+          </Box>
         </Box>
       </Paper>
       <Box align="center" className="expand-less">
@@ -72,7 +72,7 @@ const Contact = () => {
           <ExpandLessOutlinedIcon sx={{ fontSize: 150 }} />
         </a>
       </Box>
-    </Container>
+    </Box>
   );
 };
 

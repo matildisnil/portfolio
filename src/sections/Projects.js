@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
-// import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import ClearIcon from '@mui/icons-material/Clear';
 import ProjectCard from '../components/ProjectCard';
 import importedProjects from '../data/projects';
@@ -9,14 +8,19 @@ import importedProjects from '../data/projects';
 const Projects = () => {
   const [projects, setProjects] = useState(importedProjects);
   const [techs, setTechs] = useState([]);
+  const [techsNamesInFilteredProjects, setTechsNamesInFilteredProjects] = useState([]);
 
-  useEffect(() => {
+  const getUniqueTechs = projectsArray => {
     const techNames = [];
-    importedProjects.forEach(project => {
+    projectsArray.forEach(project => {
       const projectTechs = project.techs.map(tech => tech.name);
       techNames.push(...projectTechs);
     });
-    const uniqueTechNames = [...new Set(techNames)];
+    return [...new Set(techNames)];
+  };
+
+  useEffect(() => {
+    const uniqueTechNames = getUniqueTechs(importedProjects);
     const techsInitialState = uniqueTechNames.map(tech => ({ name: tech, filterIsActive: false }));
     setTechs(techsInitialState);
   }, []);
@@ -44,6 +48,11 @@ const Projects = () => {
     // this dependency works because i'm not changing it in here
   }, [techs]);
 
+  useEffect(() => {
+    const techsInFilteredProjects = getUniqueTechs(projects);
+    setTechsNamesInFilteredProjects(techsInFilteredProjects);
+  }, [projects]);
+
   return (
     <Box className="section" sx={{/* display: { xs: 'block', sm: 'none'} */ }}>
       <Typography variant="h2" align="center" mb={5}>
@@ -55,6 +64,7 @@ const Projects = () => {
           <Button
             variant="contained"
             sx={{ margin: 1 }}
+            disabled={!techsNamesInFilteredProjects.includes(tech.name)}
             color="buttonTech"
             onClick={changeFilters}
             name={tech.name}
@@ -63,7 +73,6 @@ const Projects = () => {
           </Button>
         ))}
       </Box>
-
       <Box sx={{
         display: 'flex', justifyContent: 'center', flexWrap: 'wrap', mb: 5,
       }}>
@@ -88,7 +97,7 @@ const Projects = () => {
           onClick={clearFilters}
           key="remove_all"
           endIcon={<ClearIcon />}>
-          Remove all filters
+          Clear filters
         </Button>
         )}
       </Box>
@@ -98,7 +107,7 @@ const Projects = () => {
         justifyContent="center"
         alignItems="center"
         sx={{ flexDirection: 'column' }}>
-        {projects.map(project => (<ProjectCard thisProject={project} key={`project_${project.title}`} />))}
+        {projects.map(project => (<ProjectCard thisProject={project} techs={techs} key={`project_${project.title}`} />))}
         {projects.length === 0 && 'There are no projects matching all the criteria'}
       </Box>
       <Box align="center">

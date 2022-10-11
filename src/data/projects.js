@@ -25,7 +25,7 @@ const projects = [
   {
     title: 'Portfolio',
     techs: [{ name: 'React', icon: <SiReact /> }, { name: 'MUI', icon: <SiMaterialui /> }],
-    description: 'This portfolio site, made using React and MUI. Deployed on Netlify. My first project using MUI, which has been a very nice experience.',
+    description: 'This portfolio site, made using React and MUI. Deployed on Netlify. My first project using MUI, which has been a very nice experience. The contact form is handled using formsubmit.co.',
     githubLink: 'https://github.com/matildisnil/portfolio',
     deployedLink: 'https://matilda-lindahl-portfolio.netlify.app/',
     imageAddress: '/portfolio3.png',

@@ -5,7 +5,6 @@ import Navbar from './components/Navbar';
 import Projects from './sections/Projects';
 import Skills from './sections/Skills';
 import Introduction from './sections/Introduction';
-import Footer from './sections/Footer';
 import Contact from './sections/Contact';
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
         <Projects />
         <Contact />
       </Container>
-      <Footer />
     </div>
   );
 }
