@@ -53,7 +53,16 @@ const Projects = () => {
       <Box className="section__space-anchor" id="Projects" />
       <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
         {techs.filter(tech => !tech.filterIsActive).map(tech => (
-          <Button variant="contained" sx={{ margin: 1 }} color="buttonTech" onClick={changeFilters} name={tech.name} key={tech.name}>{tech.name}</Button>))}
+          <Button
+            variant="contained"
+            sx={{ margin: 1 }}
+            color="buttonTech"
+            onClick={changeFilters}
+            name={tech.name}
+            key={tech.name}>
+            {tech.name}
+          </Button>
+        ))}
       </Box>
 
       <Box sx={{
@@ -71,7 +80,18 @@ const Projects = () => {
             {tech.name}
           </Button>
         ))}
-        {techs.filter(tech => tech.filterIsActive).length !== 0 && <Button variant="contained" color="buttonClearFilters" sx={{ margin: 1 }} onClick={clearFilters} key="remove_all" endIcon={<ClearIcon />}>Remove all filters</Button>}
+        {techs.filter(tech => tech.filterIsActive).length !== 0
+        && (
+        <Button
+          variant="contained"
+          color="buttonClearFilters"
+          sx={{ margin: 1 }}
+          onClick={clearFilters}
+          key="remove_all"
+          endIcon={<ClearIcon />}>
+          Remove all filters
+        </Button>
+        )}
       </Box>
       <Box
         display="flex"
