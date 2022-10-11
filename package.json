@@ -21,13 +21,38 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint ./src/**/*.js",
+    "lint-watch": "nodemon --exec 'npm run lint --silent'"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+        "salt",
+        "salt/react"
+    ],
+    "rules": {
+        "react/jsx-closing-bracket-location": [
+            "error",
+            {
+              "selfClosing": "after-props",
+              "nonEmpty": "after-props"
+            }
+          ],
+          "react/jsx-filename-extension": [
+            "error",
+            {
+              "extensions": [
+                ".js"
+              ]
+            }
+          ],
+          "react/prop-types": "off"
+    },
+    "plugins": ["mui"],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    }
   },
   "browserslist": {
     "production": [
@@ -42,6 +67,7 @@
     ]
   },
   "devDependencies": {
+    "eslint-config-salt": "^1.2.0",
     "react-scripts": "^5.0.1"
   }
 }

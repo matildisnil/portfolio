@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, MenuItem } from '@mui/material';
+import {
+  AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, MenuItem,
+} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
 
 const sections = ['Skills', 'Projects'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -11,11 +12,11 @@ const sections = ['Skills', 'Projects'];
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
-  const handleOpenNavMenu = (event) => {
+  const handleOpenNavMenu = event => {
     setAnchorElNav(event.currentTarget);
   };
 
-  const handleCloseNavMenu = (event) => {
+  const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
@@ -36,8 +37,7 @@ const ResponsiveAppBar = () => {
               letterSpacing: '0rem',
               color: 'inherit',
               textDecoration: 'none',
-            }}
-          >
+            }}>
             Matilda Lindahl
           </Typography>
 
@@ -48,8 +48,7 @@ const ResponsiveAppBar = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
-            >
+              color="inherit">
               <MenuIcon />
             </IconButton>
             <Menu
@@ -68,9 +67,8 @@ const ResponsiveAppBar = () => {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {sections.map((page) => (
+              }}>
+              {sections.map(page => (
                 <a href={`#${page}`} key={page}>
                   <MenuItem onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page}</Typography>
@@ -92,23 +90,24 @@ const ResponsiveAppBar = () => {
               letterSpacing: '0rem',
               color: 'inherit',
               textDecoration: 'none',
-            }}
-          >
+            }}>
             Matilda Lindahl
           </Typography>
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            {sections.map((page) => (
+            {sections.map(page => (
               <Button
                 key={page}
                 href={`#${page}`}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
+                sx={{ my: 2, color: 'white', display: 'block' }}>
                 {page}
               </Button>
             ))}
 
-            {/*        removed from button, as it keeps links from working, it shouldn\t be there anyway, should it?     onClick={handleCloseNavMenu} */}
+            {/* removed from button, as it keeps links from working,
+                it shouldn\t be there anyway, should it? that would be
+                 if I moved the navigation there instead
+                onClick={handleCloseNavMenu} */}
           </Box>
           <a href="https://github.com/matildisnil">
             <GitHubIcon sx={{ display: { xs: 'none', md: 'flex' }, ml: 1 }} />
@@ -116,7 +115,6 @@ const ResponsiveAppBar = () => {
           <a href="http://www.linkedin.com/in/matildalindahl">
             <LinkedInIcon sx={{ display: { xs: 'none', md: 'flex' }, ml: 1 }} />
           </a>
-
 
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
