@@ -40,7 +40,6 @@ const Projects = () => {
       filteredProjects = filteredProjects.filter(project => project.techs
         .find(tech => tech.name === techObj.name));
     });
-    console.log('hello');
     setProjects(filteredProjects);
     // this dependency works because i'm not changing it in here
   }, [techs]);
