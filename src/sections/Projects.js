@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Typography, Button } from '@mui/material';
-import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
+import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 // import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import ClearIcon from '@mui/icons-material/Clear';
 import ProjectCard from '../components/ProjectCard';
@@ -102,8 +102,8 @@ const Projects = () => {
         {projects.length === 0 && 'There are no projects matching all the criteria'}
       </Box>
       <Box align="center">
-        <a href="#Introduction">
-          <ExpandLessOutlinedIcon className="grow" sx={{ fontSize: 150 }} />
+        <a href="#Contact">
+          <ExpandMoreOutlinedIcon className="grow" sx={{ fontSize: 150 }} />
         </a>
       </Box>
     </Box>
