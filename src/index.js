@@ -61,6 +61,16 @@ const theme = createTheme({
       contrastText: '#fff',
     },
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      mdl: 1104,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
 });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

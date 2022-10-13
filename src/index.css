@@ -61,9 +61,11 @@ a {
     margin-bottom: 3rem;
 }
 
-.skillspaper__text-container {
+/* .skillspaper__text-container {
     padding: 15px;
-}
+} */
+
+
 
 .skill-row {
     display: flex;

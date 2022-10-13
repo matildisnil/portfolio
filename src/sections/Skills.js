@@ -11,7 +11,7 @@ const Skills = () => (
       Skills
     </Typography>
     <Box className="section__space-anchor" id="Skills" />
-    <Grid container direction="row" justifyContent="center" alignItems="center" spacing={3} className="skills__board">
+    <Grid container direction="row" justifyContent="center" alignItems="center" className="skills__board" sx={{ width: { sm: 600, mdl: 1 }, mx: 'auto' }}>
       {skills.map(skill => (
         <SkillsPaper
           thisSkill={skill}

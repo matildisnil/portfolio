@@ -6,7 +6,7 @@ import {
 const projects = [
   {
     title: 'Activity-knot',
-    techs: [{ name: 'React', icon: <SiReact /> }, { name: 'Node.js', icon: <SiNodedotjs /> }, { name: 'Express', icon: <SiExpress /> }, { name: 'PostgreSQL', icon: <SiPostgresql /> }],
+    techs: [{ name: 'PostgreSQL', icon: <SiPostgresql /> }, { name: 'Express', icon: <SiExpress /> }, { name: 'React', icon: <SiReact /> }, { name: 'Node.js', icon: <SiNodedotjs /> }],
     description: "My mob's final project for the </salt> bootcamp. A web app to help you meet new people who share your interests. Allows you to create, read, update and delete events. Uses a PERN-stack, and PrimeReact components.",
     githubLink: 'https://github.com/matildisnil/saltFinalProjectFrontend',
     secondGithubLink: 'https://github.com/matildisnil/saltFinalProjectBackend',

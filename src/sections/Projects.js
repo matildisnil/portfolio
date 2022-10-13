@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import {
+  Box, Typography, Button, Divider,
+} from '@mui/material';
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 import ClearIcon from '@mui/icons-material/Clear';
 import ProjectCard from '../components/ProjectCard';
@@ -16,7 +18,7 @@ const Projects = () => {
       const projectTechs = project.techs.map(tech => tech.name);
       techNames.push(...projectTechs);
     });
-    return [...new Set(techNames)];
+    return [...new Set(techNames)].sort();
   };
 
   useEffect(() => {
@@ -54,12 +56,14 @@ const Projects = () => {
   }, [projects]);
 
   return (
-    <Box className="section" sx={{/* display: { xs: 'block', sm: 'none'} */ }}>
+    <Box className="section" sx={{ /* display: { xs: 'block', sm: 'none'} */ }}>
       <Typography variant="h2" align="center" mb={5}>
         My projects
       </Typography>
       <Box className="section__space-anchor" id="Projects" />
-      <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+      <Box sx={{
+        display: 'flex', flexWrap: 'wrap', justifyContent: 'center',
+      }}>
         {techs.filter(tech => !tech.filterIsActive).map(tech => (
           <Button
             variant="contained"
@@ -107,7 +111,17 @@ const Projects = () => {
         justifyContent="center"
         alignItems="center"
         sx={{ flexDirection: 'column' }}>
-        {projects.map(project => (<ProjectCard thisProject={project} techs={techs} key={`project_${project.title}`} />))}
+        {projects.map((project, index, arr) => (
+          <Box>
+            <ProjectCard thisProject={project} techs={techs} key={`project_${project.title}`} />
+            {index !== arr.length - 1 && (
+            // <Divider sx={{
+            //   borderTop: '10px solid purple', width: { xs: 1, sm: 0.8, md: 0.65 }, mx: 'auto',
+            // }} />
+            <Divider color="'#212121'" sx={{ height: 10, width: { xs: 0.95, sm: 0.75, md: 0.65 }, mx: 'auto' }} />
+            )}
+          </Box>
+        ))}
         {projects.length === 0 && 'There are no projects matching all the criteria'}
       </Box>
       <Box align="center">

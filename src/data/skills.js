@@ -1,32 +1,35 @@
 import React from 'react';
 import {
-  // SiJavascript, SiTypescript,
+  SiJavascript, SiTypescript,
   SiReact, SiRedux, SiCss3, SiHtml5, SiMaterialui, SiNodedotjs,
   SiExpress, SiMongodb, SiPostgresql, SiGit, SiHeroku, SiNetlify, SiContentful,
 } from 'react-icons/si';
 
 const skills = [
-//   {
-//   title: 'Languages',
-//   techs: [
-//     {
-//       title: 'Javascript',
-//       icon: <SiJavascript />,
-//     },
-//     {
-//       title: 'TypeScript',
-//       icon: <SiTypescript />,
-//     },
-//     {
-//       title: 'HTML5',
-//       icon: <SiHtml5 />,
-//     },
-//     {
-//       title: 'CSS3',
-//       icon: <SiCss3 />,
-//     },
-//   ],
-// },
+  {
+    title: 'Languages',
+    techs: [
+      {
+        title: 'Javascript',
+        icon: <SiJavascript />,
+      },
+      {
+        title: 'TypeScript',
+        icon: <SiTypescript />,
+      },
+      {
+        title: 'HTML5',
+        icon: <SiHtml5 />,
+      },
+      {
+        title: 'CSS3',
+        icon: <SiCss3 />,
+      },
+      {
+        title: 'Matlab',
+      },
+    ],
+  },
   {
     title: 'Frontend',
     techs: [
@@ -37,14 +40,6 @@ const skills = [
       {
         title: 'Redux',
         icon: <SiRedux />,
-      },
-      {
-        title: 'HTML5',
-        icon: <SiHtml5 />,
-      },
-      {
-        title: 'CSS3',
-        icon: <SiCss3 />,
       },
       {
         title: 'MUI',

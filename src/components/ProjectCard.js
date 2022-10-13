@@ -10,7 +10,7 @@ import CardContent from '@mui/material/CardContent';
 export default function ProjectCard({ thisProject, techs }) {
   return (
     <Card sx={{
-      display: 'flex', flexDirection: 'row', width: { xs: 1, sm: 0.8, md: 0.7 }, height: { md: 300 }, p: 2, mb: 3,
+      display: 'flex', flexDirection: 'row', width: { xs: 1, sm: 0.8, md: 0.7 }, height: { md: 300 }, p: 2, my: 1.5, mx: 'auto',
     }}>
       {/* <Card sx={{width: {xs: 1}, mb: 3 }}> */}
       <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>

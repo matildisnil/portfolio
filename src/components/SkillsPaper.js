@@ -5,22 +5,32 @@ import {
 import { GoPrimitiveDot } from 'react-icons/go';
 
 const SkillsPaper = ({ thisSkill }) => (
-  <Grid item xs={12} sm={3}>
-    <Paper elevation={2} sx={{ height: 200 }}>
-      <Box className="skillspaper__text-container">
-        <Typography variant="subtitle" component="h3">
-          {thisSkill.title}
-        </Typography>
-        {thisSkill.techs.map(element => (
-          <Box className="skill-row" key={`${element.title}_skill`}>
-            {element.icon ? element.icon : <GoPrimitiveDot />}
-            <Typography ml={1}>
-              {' '}
-              {element.title}
-              {' '}
-            </Typography>
-          </Box>
-        ))}
+  <Grid item>
+    <Paper
+      elevation={2}
+      sx={{
+        margin: 2,
+      }}>
+      <Box sx={{ padding: 2, backgroundColor: 'lightblue', borderRadius: 1 }}>
+        <Box
+          className="coloredPadding"
+          sx={{
+            padding: 3, px: 4, height: 230, minWidth: 200, backgroundColor: 'white', borderRadius: 1,
+          }}>
+          <Typography variant="subtitle" component="h3" sx={{ mb: 0.5 }}>
+            {thisSkill.title}
+          </Typography>
+          {thisSkill.techs.map(element => (
+            <Box className="skill-row" key={`${element.title}_skill`}>
+              {element.icon ? element.icon : <GoPrimitiveDot />}
+              <Typography ml={1}>
+                {' '}
+                {element.title}
+                {' '}
+              </Typography>
+            </Box>
+          ))}
+        </Box>
       </Box>
     </Paper>
   </Grid>
