@@ -4,7 +4,7 @@ import {
 import React, { useState } from 'react';
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
 
-const submitString = process.env.NODE_ENV === 'development' ? '81288dfd0888dfc00e1552147fed9660' : 'matildalindahl.contact@gmail.com';
+const submitString = '81288dfd0888dfc00e1552147fed9660';
 
 const Contact = () => {
   const defaultValues = {
