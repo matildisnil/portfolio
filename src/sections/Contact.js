@@ -3,6 +3,9 @@ import {
 } from '@mui/material';
 import React, { useState } from 'react';
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
+import { MedicationLiquidSharp } from '@mui/icons-material';
+
+const submitString = process.env.NODE_ENV === 'development' ? '81288dfd0888dfc00e1552147fed9660' : 'matildalindahl.contact@gmail.com';
 
 const Contact = () => {
   const defaultValues = {
@@ -27,7 +30,7 @@ const Contact = () => {
         width: { xs: 1, sm: 0.8, md: 0.6 }, mx: 'auto',
       }}>
       <Paper>
-        <Box sx={{ padding: 2, backgroundColor: 'lightgoldenrodyellow', borderRadius: 1 }}>
+        <Box sx={{ padding: 2, backgroundColor: '#b2ebf2', borderRadius: 1 }}>
           <Box className="contact__container" sx={{ backgroundColor: 'white', borderRadius: 1 }}>
             <Typography
               variant="h3"
@@ -41,7 +44,7 @@ const Contact = () => {
               className="section__space-anchor
            section__space-anchor--less-space"
               id="Contact" />
-            <Box component="form" target="_blank" action="https://formsubmit.co/81288dfd0888dfc00e1552147fed9660" method="POST" className="contact-form" sx={{ my: 2, mx: { xs: 0, sm: 1, md: 2 } }}>
+            <Box component="form" target="_blank" action={`https://formsubmit.co/${submitString}`} method="POST" className="contact-form" sx={{ my: 2, mx: { xs: 0, sm: 1, md: 2 } }}>
               <TextField
                 id="email-input"
                 name="email"

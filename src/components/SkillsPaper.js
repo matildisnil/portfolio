@@ -11,7 +11,7 @@ const SkillsPaper = ({ thisSkill }) => (
       sx={{
         margin: 2,
       }}>
-      <Box sx={{ padding: 2, backgroundColor: 'lightblue', borderRadius: 1 }}>
+      <Box sx={{ padding: 2, backgroundColor: '#b2dfdb', borderRadius: 1 }}>
         <Box
           className="coloredPadding"
           sx={{

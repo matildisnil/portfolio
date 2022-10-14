@@ -12,17 +12,17 @@ const Introduction = () => (
       className="first-section"
       sx={{
         /* minHeight: {md: 'calc(100vh-20)'} */
-        width: '0.9',
+        width: '1',
         alignItems: 'center',
         justifyContent: 'center',
         marginBottom: { xs: 0, sm: 7, md: 0 },
       }}>
-      <Grid item xs={12} sm={12} md={4} lg={4} xl={4} sx={{ mb: { xs: 0, md: 0 } }}>
+      <Grid item xs={12} md={4} sx={{ mb: { xs: 0, md: 0 } }}>
         <MyImage />
       </Grid>
 
-      <Grid item xs={12} sm={12} md={7} lg={7} xl={7}>
-        <Box width={{ xs: 0.95, sm: 0.7, md: 0.8 }} sx={{ margin: '0 auto' }}>
+      <Grid item xs={12} md={7}>
+        <Box width={{ xs: 0.95, sm: 0.7, md: 0.8 }} sx={{ mx: 'auto' }}>
           <Typography
             variant="h3"
             component="h1"
@@ -46,7 +46,7 @@ const Introduction = () => (
           {/*        <Typography variant="h2" align="center" mb={2}>Hi, I'm Matilda
         </Typography> */}
 
-          <Typography sx={{ mb: 2, backgroundColor: 'pink' }} variant="h5" component="p" align="justify">
+          <Typography sx={{ mb: 2, backgroundColor: '#f8bbd0', py: 0.5 }} variant="h5" component="p" align="justify">
             I&apos;m a full stack JavaScript developer based in Stockholm.
           </Typography>
           <Typography sx={{ mb: 2 }} variant="body1" component="p" align="justify">

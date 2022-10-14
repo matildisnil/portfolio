@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
-  Box, Typography, Button, Divider,
+  Box, Typography, Button,
 } from '@mui/material';
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 import ClearIcon from '@mui/icons-material/Clear';
@@ -70,6 +70,7 @@ const Projects = () => {
             sx={{ margin: 1 }}
             disabled={!techsNamesInFilteredProjects.includes(tech.name)}
             color="buttonTech"
+            size="small"
             onClick={changeFilters}
             name={tech.name}
             key={tech.name}>
@@ -87,6 +88,7 @@ const Projects = () => {
             onClick={changeFilters}
             name={tech.name}
             color="buttonActiveTech"
+            size="small"
             key={tech.name}
             endIcon={<ClearIcon />}>
             {tech.name}
@@ -97,6 +99,7 @@ const Projects = () => {
         <Button
           variant="contained"
           color="buttonClearFilters"
+          size="small"
           sx={{ margin: 1 }}
           onClick={clearFilters}
           key="remove_all"
@@ -111,15 +114,9 @@ const Projects = () => {
         justifyContent="center"
         alignItems="center"
         sx={{ flexDirection: 'column' }}>
-        {projects.map((project, index, arr) => (
+        {projects.map(project => (
           <Box>
             <ProjectCard thisProject={project} techs={techs} key={`project_${project.title}`} />
-            {index !== arr.length - 1 && (
-            // <Divider sx={{
-            //   borderTop: '10px solid purple', width: { xs: 1, sm: 0.8, md: 0.65 }, mx: 'auto',
-            // }} />
-            <Divider color="'#212121'" sx={{ height: 10, width: { xs: 0.95, sm: 0.75, md: 0.65 }, mx: 'auto' }} />
-            )}
           </Box>
         ))}
         {projects.length === 0 && 'There are no projects matching all the criteria'}
