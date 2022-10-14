@@ -70,7 +70,6 @@ const Projects = () => {
             sx={{ margin: 1 }}
             disabled={!techsNamesInFilteredProjects.includes(tech.name)}
             color="buttonTech"
-            size="small"
             onClick={changeFilters}
             name={tech.name}
             key={tech.name}>
@@ -88,7 +87,6 @@ const Projects = () => {
             onClick={changeFilters}
             name={tech.name}
             color="buttonActiveTech"
-            size="small"
             key={tech.name}
             endIcon={<ClearIcon />}>
             {tech.name}
@@ -99,7 +97,6 @@ const Projects = () => {
         <Button
           variant="contained"
           color="buttonClearFilters"
-          size="small"
           sx={{ margin: 1 }}
           onClick={clearFilters}
           key="remove_all"
