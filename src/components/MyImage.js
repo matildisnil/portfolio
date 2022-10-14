@@ -23,7 +23,9 @@ const MyImage = () => {
         maxHeight: { xs: 250, md: 400 },
         maxWidth: { xs: 250, md: 400 },
         }} */}
-      <Box sx={{ backgroundColor: '#f8bbd0', p: 2 }}>
+      <Box sx={{
+        backgroundColor: '#f8bbd0', p: 2, pb: 1,
+      }}>
         <Fade in={visible} timeout={1500}>
           <Box
             component="img"

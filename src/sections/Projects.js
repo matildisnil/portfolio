@@ -115,9 +115,7 @@ const Projects = () => {
         alignItems="center"
         sx={{ flexDirection: 'column' }}>
         {projects.map(project => (
-          <Box>
-            <ProjectCard thisProject={project} techs={techs} key={`project_${project.title}`} />
-          </Box>
+          <ProjectCard thisProject={project} techs={techs} key={`project_${project.title}`} />
         ))}
         {projects.length === 0 && 'There are no projects matching all the criteria'}
       </Box>
