@@ -30,7 +30,7 @@ export default function ProjectCard({ thisProject, techs }) {
         </CardContent>
         <CardActions>
           <Button color="button1" href={thisProject.deployedLink} variant="contained" disableElevation target="_blank" size="small" sx={{ padding: '3px 6px' }}>Deployed app</Button>
-          <Button color="button2" href={thisProject.githubLink} variant="contained" disableElevation target="_blank" size="small" sx={{ padding: '3px 6px' }}>Github frontend</Button>
+          <Button color="button2" href={thisProject.githubLink.link} variant="contained" disableElevation target="_blank" size="small" sx={{ padding: '3px 6px' }}>{thisProject.githubLink.buttonTitle}</Button>
           {thisProject.secondGithubLink
             ? <Button color="button3" href={thisProject.secondGithubLink} className="projectcard__button" variant="contained" disableElevation target="_blank" size="small" sx={{ padding: '3px 6px' }}>Github backend</Button> : ''}
         </CardActions>

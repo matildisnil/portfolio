@@ -47,13 +47,14 @@ const Projects = () => {
         .find(tech => tech.name === techObj.name));
     });
     setProjects(filteredProjects);
-    // this dependency works because i'm not changing it in here
+    const techsInFilteredProjects = getUniqueTechs(filteredProjects);
+    setTechsNamesInFilteredProjects(techsInFilteredProjects);
   }, [techs]);
 
-  useEffect(() => {
-    const techsInFilteredProjects = getUniqueTechs(projects);
-    setTechsNamesInFilteredProjects(techsInFilteredProjects);
-  }, [projects]);
+  // useEffect(() => {
+  //   const techsInFilteredProjects = getUniqueTechs(projects);
+  //   setTechsNamesInFilteredProjects(techsInFilteredProjects);
+  // }, [projects]);
 
   return (
     <Box className="section" sx={{ /* display: { xs: 'block', sm: 'none'} */ }}>
