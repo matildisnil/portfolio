@@ -4,8 +4,6 @@ import {
 import React, { useState } from 'react';
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
 
-const submitString = '81288dfd0888dfc00e1552147fed9660';
-
 const Contact = () => {
   const defaultValues = {
     email: '',
@@ -43,7 +41,7 @@ const Contact = () => {
               className="section__space-anchor
            section__space-anchor--less-space"
               id="Contact" />
-            <Box component="form" target="_blank" action={`https://formsubmit.co/${submitString}`} method="POST" className="contact-form" sx={{ my: 2, mx: { xs: 0, sm: 1, md: 2 } }}>
+            <Box component="form" target="_blank" action="https://formsubmit.co/81288dfd0888dfc00e1552147fed9660" method="POST" className="contact-form" sx={{ my: 2, mx: { xs: 0, sm: 1, md: 2 } }}>
               <TextField
                 id="email-input"
                 name="email"
