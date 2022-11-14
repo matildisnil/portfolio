@@ -4,15 +4,23 @@ import {
 } from 'react-icons/si';
 
 const projects = [
-  {
-    title: 'See you there!',
-    techs: [{ name: 'Express', icon: <SiExpress /> }, { name: 'React', icon: <SiReact /> }, { name: 'Node.js', icon: <SiNodedotjs /> }, { name: 'MUI', icon: <SiMaterialui /> }],
-    description: 'This is a web app I made for hackday at </salt>. It helps you synchronize your travelling on Stockholm public transportation with that of a friend. The backend is made with node.js and express and the frontend with React and MUI. Using TRAFIKLABs SL APIs.',
-    githubLink: { link: 'https://github.com/matildisnil/seeYouThereFrontend', buttonTitle: 'Github Frontend' },
-    secondGithubLink: 'https://github.com/matildisnil/seeYouThereBackend',
-    deployedLink: 'https://see-you-there.herokuapp.com/',
-    imageAddress: '/seeYouThere.png',
-  },
+  // {
+  //   title: 'See you there!',
+  //   techs: [
+  //     { name: 'Express', icon: <SiExpress /> },
+  //     { name: 'React', icon: <SiReact /> },
+  //     { name: 'Node.js', icon: <SiNodedotjs /> },
+  //     { name: 'MUI', icon: <SiMaterialui /> },
+  //   ],
+  //   description: 'This is a web app I made for hackday at </salt>.
+  //  It helps you synchronize your travelling on Stockholm public transportation
+  // with that of a friend. The backend is made with node.js and express and the
+  // frontend with React and MUI. Using TRAFIKLABs SL APIs.',
+  //   githubLink: { link: 'https://github.com/matildisnil/seeYouThereFrontend', buttonTitle: 'Github Frontend' },
+  //   secondGithubLink: 'https://github.com/matildisnil/seeYouThereBackend',
+  //   deployedLink: 'https://see-you-there.herokuapp.com/',
+  //   imageAddress: '/seeYouThere.png',
+  // },
   {
     title: 'Activity-knot',
     techs: [{ name: 'PostgreSQL', icon: <SiPostgresql /> }, { name: 'Express', icon: <SiExpress /> }, { name: 'React', icon: <SiReact /> }, { name: 'Node.js', icon: <SiNodedotjs /> }],
