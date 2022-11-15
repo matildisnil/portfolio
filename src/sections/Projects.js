@@ -63,7 +63,11 @@ const Projects = () => {
       </Typography>
       <Box className="section__space-anchor" id="Projects" />
       <Box sx={{
-        display: 'flex', flexWrap: 'wrap', justifyContent: 'center',
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        width: { xs: 1, sm: 0.8, md: 0.7 },
+        margin: 'auto',
       }}>
         {techs.filter(tech => !tech.filterIsActive).map(tech => (
           <Button
@@ -79,7 +83,12 @@ const Projects = () => {
         ))}
       </Box>
       <Box sx={{
-        display: 'flex', justifyContent: 'center', flexWrap: 'wrap', mb: 5,
+        display: 'flex',
+        justifyContent: 'center',
+        flexWrap: 'wrap',
+        mb: 5,
+        width: { xs: 1, sm: 0.8, md: 0.7 },
+        margin: 'auto',
       }}>
         {techs.filter(tech => tech.filterIsActive).map(tech => (
           <Button

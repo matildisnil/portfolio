@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   SiReact, SiMaterialui, SiNodedotjs, SiExpress, SiPostgresql, SiMongodb, SiTypescript,
+  SiFirebase, SiNextdotjs, SiRedux,
 } from 'react-icons/si';
 
 const projects = [
@@ -21,6 +22,14 @@ const projects = [
   //   deployedLink: 'https://see-you-there.herokuapp.com/',
   //   imageAddress: '/seeYouThere.png',
   // },
+  {
+    title: 'Please-Read-Me',
+    techs: [{ name: 'Firebase', icon: <SiFirebase /> }, { name: 'Next.js', icon: <SiNextdotjs /> }, { name: 'Redux', icon: <SiRedux /> }],
+    description: 'A reading list web-app built with next.js. I’m using Firebase for authentication and Cloud Firestore for the database. State is handled with Redux. I am also using the Google Books API to help the user search for books.',
+    githubLink: { link: 'https://github.com/matildisnil/next-reading-list', buttonTitle: 'Github Frontend' },
+    deployedLink: 'https://next-reading-list-seven.vercel.app/',
+    imageAddress: '/reading-list2.PNG',
+  },
   {
     title: 'Activity-knot',
     techs: [{ name: 'PostgreSQL', icon: <SiPostgresql /> }, { name: 'Express', icon: <SiExpress /> }, { name: 'React', icon: <SiReact /> }, { name: 'Node.js', icon: <SiNodedotjs /> }],
