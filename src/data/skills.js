@@ -1,8 +1,9 @@
 import React from 'react';
 import {
   SiJavascript, SiTypescript,
-  SiReact, SiRedux, SiCss3, SiHtml5, SiMaterialui, SiNodedotjs,
+  SiReact, SiNextdotjs, SiRedux, SiCss3, SiHtml5, SiMaterialui, SiNodedotjs,
   SiExpress, SiMongodb, SiPostgresql, SiGit, SiHeroku, SiNetlify, SiContentful,
+  SiFirebase,
 } from 'react-icons/si';
 
 const skills = [
@@ -38,6 +39,10 @@ const skills = [
         icon: <SiReact />,
       },
       {
+        title: 'Next.js',
+        icon: <SiNextdotjs />,
+      },
+      {
         title: 'Redux',
         icon: <SiRedux />,
       },
@@ -66,6 +71,10 @@ const skills = [
       {
         title: 'PostgreSQL',
         icon: <SiPostgresql />,
+      },
+      {
+        title: 'Firebase',
+        icon: <SiFirebase />,
       },
       { title: 'REST' },
     ],
