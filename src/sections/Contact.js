@@ -26,9 +26,10 @@ const Contact = () => {
       sx={{
         width: { xs: 1, sm: 0.8, md: 0.6 }, mx: 'auto',
       }}>
-      <Paper>
-        <Box sx={{ padding: 2, backgroundColor: '#b2ebf2', borderRadius: 1 }}>
-          <Box className="contact__container" sx={{ backgroundColor: 'white', borderRadius: 1 }}>
+      <Box sx={{ padding: 2, backgroundColor: '#b2ebf2', borderRadius: 1 }}>
+
+        <Paper>
+          <Box className="contact__container" sx={{ borderRadius: 1 }}>
             <Typography
               variant="h3"
               component="h2"
@@ -71,8 +72,9 @@ const Contact = () => {
               <Button variant="contained" type="submit" color="primary">Submit</Button>
             </Box>
           </Box>
-        </Box>
-      </Paper>
+        </Paper>
+      </Box>
+
       <Box align="center" className="expand-less">
         <a href="#Introduction">
           <ExpandLessOutlinedIcon sx={{ fontSize: 150 }} />

@@ -1,15 +1,19 @@
-import * as React from 'react';
+import React, { useContext } from 'react';
 import {
   AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, MenuItem,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import ColorModeContext from './ColorModeContext';
 
 const sections = ['Skills', 'Projects', 'Contact'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
+  const value = useContext(ColorModeContext);
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = event => {
@@ -18,6 +22,11 @@ const ResponsiveAppBar = () => {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+
+  const handleToggleDarkMode = () => {
+    value.toggleColorMode();
+    console.log('hello');
   };
 
   return (
@@ -115,6 +124,7 @@ const ResponsiveAppBar = () => {
           <a href="http://www.linkedin.com/in/matildalindahl">
             <LinkedInIcon sx={{ display: { xs: 'none', md: 'flex' }, ml: 1 }} />
           </a>
+          <Brightness4Icon onClick={handleToggleDarkMode} sx={{ display: { xs: 'none', md: 'flex' }, ml: 1 }} />
 
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
