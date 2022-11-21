@@ -72,6 +72,7 @@ const Projects = () => {
         {techs.filter(tech => !tech.filterIsActive).map(tech => (
           <Button
             variant="contained"
+            disableElevation
             sx={{ margin: 1 }}
             disabled={!techsNamesInFilteredProjects.includes(tech.name)}
             color="buttonTech"
@@ -94,6 +95,7 @@ const Projects = () => {
           <Button
             sx={{ margin: 1 }}
             variant="contained"
+            disableElevation
             onClick={changeFilters}
             name={tech.name}
             color="buttonActiveTech"
@@ -106,6 +108,7 @@ const Projects = () => {
         && (
         <Button
           variant="contained"
+          disableElevation
           color="buttonClearFilters"
           sx={{ margin: 1 }}
           onClick={clearFilters}
