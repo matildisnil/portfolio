@@ -2,7 +2,6 @@ import React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Container } from '@mui/system';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-
 import {
   pink, teal, cyan, blueGrey,
 } from '@mui/material/colors';
@@ -146,10 +145,10 @@ const getDesignTokens = mode => ({
 
 function App() {
   // eslint-disable-next-line no-unused-vars
-  const [mode, setMode] = React.useState('light');
+  const [mode, setMode] = React.useState('dark');
   const colorMode = React.useMemo(
     () => ({
-      // The dark mode switch would invoke this method
+      // The dark mode switch invokes this method
       toggleColorMode: () => {
         setMode(prevMode => (prevMode === 'light' ? 'dark' : 'light'));
       },
