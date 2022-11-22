@@ -3,6 +3,9 @@ import {
 } from '@mui/material';
 import React, { useState } from 'react';
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+// import { SiLinkedin, SiGithub } from 'react-icons/si';
 
 const Contact = () => {
   const defaultValues = {
@@ -26,17 +29,49 @@ const Contact = () => {
       sx={{
         width: { xs: 1, sm: 0.8, md: 0.6 }, mx: 'auto',
       }}>
-      <Paper>
-        <Box sx={{ padding: 2, backgroundColor: '#b2ebf2', borderRadius: 1 }}>
-          <Box className="contact__container" sx={{ backgroundColor: 'white', borderRadius: 1 }}>
+      <Box sx={{ padding: 1, backgroundColor: 'button1.main', borderRadius: 1 }}>
+
+        <Paper>
+          <Box className="contact__container" sx={{ borderRadius: 1 }}>
+            {/*  <Box align="center" sx={{ m: 1 }}>
+              <a href="https://github.com/matildisnil">
+                <GitHubIcon sx={{ fontSize: 30 }} />
+              </a>
+              <a href="http://www.linkedin.com/in/matildalindahl">
+                <LinkedInIcon sx={{ ml: 1, fontSize: 30 }} />
+              </a>
+            </Box>
             <Typography
               variant="h3"
               component="h2"
               align="center"
-              my={2}
+              // my={2}
+              mb={2.5}
+              mt={1}
+              className="form-container__heading">
+              Contact me!
+            </Typography> */}
+            <Typography
+              variant="h3"
+              component="h2"
+              align="center"
+              // my={2}
+              mb={2}
+              mt={3}
               className="form-container__heading">
               Contact me!
             </Typography>
+            <Box align="center" sx={{ p: 0.5 }}>
+              <a href="https://github.com/matildisnil">
+                <GitHubIcon sx={{ fontSize: 30 }} />
+              </a>
+              <a href="http://www.linkedin.com/in/matildalindahl">
+                <LinkedInIcon sx={{ ml: 1, fontSize: 30 }} />
+              </a>
+              {/* <IconButton sx={{ ml: 1 }} color="inherit">
+                <GitHubIcon sx={{ fontSize: 30 }} />
+              </IconButton> */}
+            </Box>
             <Box
               className="section__space-anchor
            section__space-anchor--less-space"
@@ -71,8 +106,9 @@ const Contact = () => {
               <Button variant="contained" type="submit" color="primary">Submit</Button>
             </Box>
           </Box>
-        </Box>
-      </Paper>
+        </Paper>
+      </Box>
+
       <Box align="center" className="expand-less">
         <a href="#Introduction">
           <ExpandLessOutlinedIcon sx={{ fontSize: 150 }} />

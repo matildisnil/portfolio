@@ -28,7 +28,7 @@ const projects = [
     description: 'A reading list web-app built with next.js. I’m using Firebase for authentication and Cloud Firestore for the database. State is handled with Redux. I am also using the Google Books API to help the user search for books.',
     githubLink: { link: 'https://github.com/matildisnil/next-reading-list', buttonTitle: 'Github Frontend' },
     deployedLink: 'https://next-reading-list-seven.vercel.app/',
-    imageAddress: '/reading-list2.PNG',
+    imageAddress: '/reading-list3.PNG',
   },
   {
     title: 'Activity-knot',
@@ -45,7 +45,7 @@ const projects = [
     description: "This mob project is one of my first TypeScript projects. It is a simple web app with CRUD operations to list dogs. We are using MongoDB to save the data and we've implemented it with Mongoose. Using Dog API (https://dog.ceo/dog-api/) for pictures.",
     githubLink: { link: 'https://github.com/matildisnil/puppiesFullstack', buttonTitle: 'Github fullstack' },
     deployedLink: 'https://dogalogue.herokuapp.com/',
-    imageAddress: '/dogalogue.png',
+    imageAddress: '/dogalogue2.png',
   },
   {
     title: 'Portfolio',

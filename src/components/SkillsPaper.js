@@ -6,16 +6,19 @@ import { GoPrimitiveDot } from 'react-icons/go';
 
 const SkillsPaper = ({ thisSkill }) => (
   <Grid item>
-    <Paper
-      elevation={2}
-      sx={{
-        margin: 2,
-      }}>
-      <Box sx={{ padding: 2, backgroundColor: '#b2dfdb', borderRadius: 1 }}>
+    <Box sx={{
+      padding: 1, backgroundColor: 'button3.dark', borderRadius: 1, margin: 2,
+    }}>
+      <Paper
+        elevation={2}
+        sx={{
+
+        }}>
+
         <Box
           className="coloredPadding"
           sx={{
-            padding: 3, px: 4, height: 230, minWidth: 200, backgroundColor: 'white', borderRadius: 1,
+            padding: 3, px: 4, height: 230, minWidth: 200, borderRadius: 1,
           }}>
           <Typography variant="subtitle" component="h3" sx={{ mb: 0.5 }}>
             {thisSkill.title}
@@ -31,8 +34,9 @@ const SkillsPaper = ({ thisSkill }) => (
             </Box>
           ))}
         </Box>
-      </Box>
-    </Paper>
+      </Paper>
+    </Box>
+
   </Grid>
 );
 

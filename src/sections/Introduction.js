@@ -46,7 +46,7 @@ const Introduction = () => (
           {/*        <Typography variant="h2" align="center" mb={2}>Hi, I'm Matilda
         </Typography> */}
 
-          <Typography sx={{ mb: 2, backgroundColor: '#f8bbd0', py: 0.5 }} variant="h5" component="p" align="justify">
+          <Typography sx={{ mb: 2, backgroundColor: 'button1.main', py: 0.5 }} variant="h5" component="p" align="justify">
             I&apos;m a full stack JavaScript developer based in Stockholm.
           </Typography>
           <Typography sx={{ mb: 2 }} variant="body1" component="p" align="justify">
