@@ -24,7 +24,7 @@ const MyImage = () => {
         maxWidth: { xs: 250, md: 400 },
         }} */}
       <Box sx={{
-        backgroundColor: '#f8bbd0', p: 2, pb: 1,
+        backgroundColor: 'button1.main', p: 2, pb: 1,
       }}>
         <Fade in={visible} timeout={1500}>
           <Box

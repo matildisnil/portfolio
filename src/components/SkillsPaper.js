@@ -7,7 +7,7 @@ import { GoPrimitiveDot } from 'react-icons/go';
 const SkillsPaper = ({ thisSkill }) => (
   <Grid item>
     <Box sx={{
-      padding: 2, backgroundColor: 'button3.main', borderRadius: 1, margin: 2,
+      padding: 1, backgroundColor: 'button3.dark', borderRadius: 1, margin: 2,
     }}>
       <Paper
         elevation={2}

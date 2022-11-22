@@ -76,9 +76,9 @@ const getDesignTokens = mode => ({
       : {
         // palette values for dark mode
         primary: {
-          light: '#bb4678',
-          main: '#870d4c',
-          dark: '#550024',
+          light: pink[700],
+          main: pink[800],
+          dark: pink[900],
           contrastText: '#fff',
         },
         secondary: {
@@ -93,21 +93,21 @@ const getDesignTokens = mode => ({
         },
         /*         text: 'white', */
         button1: {
-          light: pink[50],
-          main: pink[100],
-          dark: pink[200],
+          light: pink[200],
+          main: pink[300],
+          dark: pink[400],
           contrastText: '#000',
         },
         button2: {
-          light: cyan[50],
-          main: cyan[100],
-          dark: cyan[200],
+          light: cyan[200],
+          main: cyan[300],
+          dark: cyan[400],
           contrastText: '#000',
         },
         button3: {
-          light: teal[50],
-          main: teal[100],
-          dark: teal[200],
+          light: teal[200],
+          main: teal[300],
+          dark: teal[400],
           contrastText: '#000',
         },
         buttonActiveTech: {

@@ -2,17 +2,20 @@ import React, { useContext } from 'react';
 import {
   AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, MenuItem,
 } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+// import GitHubIcon from '@mui/icons-material/GitHub';
+// import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
 import ColorModeContext from './ColorModeContext';
 
 const sections = ['Skills', 'Projects', 'Contact'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
-  const value = useContext(ColorModeContext);
+  const colorMode = useContext(ColorModeContext);
+  const theme = useTheme();
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -24,10 +27,10 @@ const ResponsiveAppBar = () => {
     setAnchorElNav(null);
   };
 
-  const handleToggleDarkMode = () => {
-    value.toggleColorMode();
-    console.log('hello');
-  };
+  // const handleToggleDarkMode = () => {
+  //   colorMode.toggleColorMode();
+  //   console.log('hello');
+  // };
 
   return (
     <AppBar position="sticky">
@@ -118,13 +121,16 @@ const ResponsiveAppBar = () => {
                  if I moved the navigation there instead
                 onClick={handleCloseNavMenu} */}
           </Box>
-          <a href="https://github.com/matildisnil">
+          {/* <a href="https://github.com/matildisnil">
             <GitHubIcon sx={{ display: { xs: 'none', md: 'flex' }, ml: 1 }} />
           </a>
           <a href="http://www.linkedin.com/in/matildalindahl">
             <LinkedInIcon sx={{ display: { xs: 'none', md: 'flex' }, ml: 1 }} />
-          </a>
-          <Brightness4Icon onClick={handleToggleDarkMode} sx={{ display: { xs: 'none', md: 'flex' }, ml: 1 }} />
+          </a> */}
+
+          <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
+            {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+          </IconButton>
 
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
