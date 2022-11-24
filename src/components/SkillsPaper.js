@@ -7,7 +7,8 @@ import { GoPrimitiveDot } from 'react-icons/go';
 // import { useSpring, animated } from 'react-spring';
 
 const SkillsPaper = ({ thisSkill }) => {
-  console.log('hello');
+  // eslint-disable-next-line no-console
+  console.log('');
   // const myRef = useRef();
   // const [visible, setVisible] = useState(false);
 
