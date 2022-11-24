@@ -7,6 +7,7 @@ import SkillsPaper from '../components/SkillsPaper';
 import skills from '../data/skills';
 
 const Skills = () => {
+  // eslint-disable-next-line no-console
   console.log('');
   // const props = useSpring({
   //   loop: true,
