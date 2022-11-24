@@ -145,7 +145,7 @@ const getDesignTokens = mode => ({
 
 function App() {
   // eslint-disable-next-line no-unused-vars
-  const [mode, setMode] = React.useState('dark');
+  const [mode, setMode] = React.useState('light');
   const colorMode = React.useMemo(
     () => ({
       // The dark mode switch invokes this method
