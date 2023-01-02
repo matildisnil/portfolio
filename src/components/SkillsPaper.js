@@ -52,6 +52,7 @@ const SkillsPaper = ({ thisSkill }) => {
   return (
     <Grid item>
       <Box
+        /* style={props} */
         sx={{
           padding: 1, backgroundColor: 'button3.dark', borderRadius: 1, margin: 2,
         }}>
