@@ -19,7 +19,7 @@ const Skills = () => {
   //   // to: { color: 'linear-gradient(135deg, rgb(185, 198, 109) 0%, rgb(34, 48, 17) 100%)' },
   //   // from: { color: 'linear-gradient(135deg, rgb(85, 69, 47) 0%, rgb(218, 102, 92) 100%)' },
   // });
-  // const AnimatedPaper = animated(Paper);
+  // // const AnimatedPaper = animated(Paper);
   // const AnimatedTypography = animated(Typography);
 
   return (
