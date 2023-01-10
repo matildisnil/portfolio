@@ -13,7 +13,7 @@ const projects = [
       { name: 'Node.js', icon: <SiNodedotjs /> },
       { name: 'MUI', icon: <SiMaterialui /> },
     ],
-    description: 'This is a web app I made for hackday at </salt>. It helps you synchronize your travelling on Stockholm public transportation with that of a friend. The backend is made with node.js and express and the frontend with React and MUI. Using TRAFIKLABs SL APIs.',
+    description: 'This is a web app that helps you synchronize your travelling on Stockholm public transportation with that of a friend. The backend is made with node.js and express and the frontend with React and MUI. Using TRAFIKLABs SL APIs.',
     githubLink: { link: 'https://github.com/matildisnil/seeYouThere', buttonTitle: 'Github fullstack' },
     deployedLink: 'https://see-you-there.herokuapp.com/',
     imageAddress: '/seeYouThere.png',
@@ -29,7 +29,7 @@ const projects = [
   {
     title: 'Activity-knot',
     techs: [{ name: 'PostgreSQL', icon: <SiPostgresql /> }, { name: 'Express', icon: <SiExpress /> }, { name: 'React', icon: <SiReact /> }, { name: 'Node.js', icon: <SiNodedotjs /> }],
-    description: "My mob's final project for the </salt> bootcamp. A web app to help you meet new people who share your interests. Allows you to create, read, update and delete events. Uses a PERN-stack, and PrimeReact components.",
+    description: 'A two week mob-project and also my first bigger project. A web app to help you meet new people who share your interests. Allows you to create, read, update and delete events. Uses a PERN-stack, and PrimeReact components.',
     githubLink: { link: 'https://github.com/matildisnil/saltFinalProjectFrontend', buttonTitle: 'Github Frontend' },
     secondGithubLink: 'https://github.com/matildisnil/saltFinalProjectBackend',
     deployedLink: 'https://activity-knot.herokuapp.com/',
